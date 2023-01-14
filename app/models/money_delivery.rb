@@ -1,0 +1,2 @@
+class MoneyDelivery < ApplicationRecord
+end
