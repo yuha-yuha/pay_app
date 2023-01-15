@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20230114211908) do
+ActiveRecord::Schema.define(version: 20230115142740) do
 
   create_table "money_deliveries", force: :cascade do |t|
     t.integer "send_user_id"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20230114211908) do
     t.string "name"
     t.string "email"
     t.string "password_digest"
-    t.integer "money"
+    t.integer "money", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
